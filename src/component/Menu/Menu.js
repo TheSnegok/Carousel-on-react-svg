@@ -1,29 +1,14 @@
 import React from 'react'
 
-const menu = [
-    {
-        text: 'Studio'
-    },
-    {
-        text: 'Partners'
-    },
-    {
-        text: 'Media'
-    },
-    {
-        text: 'user'
-    }
-]
-
-export const Menu = () => {
-    return (
-            menu.map((item, index) => (
-                    <li key={index} className="list">
-                        <p key={index}>{menu.item}</p>
-                    </li>
+const Menu = (props) => {
+        return (
+            props.items.map((item, index) => (
+                <li key={index} className="list">
+                        <h1 key={item}>{item.text}</h1>
+                </li>
                 )
             )
-    )
+        )
 }
 
 export default Menu;
